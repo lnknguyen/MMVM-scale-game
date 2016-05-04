@@ -8,12 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		1E4676351CD6401500CBFBBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4676341CD6401500CBFBBC /* AppDelegate.swift */; };
-		1E4676371CD6401500CBFBBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4676361CD6401500CBFBBC /* ViewController.swift */; };
 		1E46763A1CD6401500CBFBBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E4676381CD6401500CBFBBC /* Main.storyboard */; };
-		1E46763C1CD6401500CBFBBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E46763B1CD6401500CBFBBC /* Assets.xcassets */; };
 		1E46763F1CD6401500CBFBBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E46763D1CD6401500CBFBBC /* LaunchScreen.storyboard */; };
 		1E46764A1CD6401500CBFBBC /* KnowYourWeightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4676491CD6401500CBFBBC /* KnowYourWeightTests.swift */; };
 		1E4676551CD6401500CBFBBC /* KnowYourWeightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4676541CD6401500CBFBBC /* KnowYourWeightUITests.swift */; };
+		1EACA0281CD64F7C00317F26 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EACA0271CD64F7C00317F26 /* UserTableViewController.swift */; };
+		1EACA02A1CD6506000317F26 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EACA0291CD6506000317F26 /* UserViewModel.swift */; };
+		1EACA0331CD74A9A00317F26 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EACA0321CD74A9A00317F26 /* Bond.framework */; };
+		1EACA0351CD74AAC00317F26 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EACA0341CD74AAC00317F26 /* CryptoSwift.framework */; };
+		1EACA0371CD74BE400317F26 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EACA0361CD74BE400317F26 /* Alamofire.framework */; };
+		1ECA1AF61CD78ED0009D68F5 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECA1AF51CD78ECF009D68F5 /* ObjectMapper.framework */; };
+		1ECA1AFC1CD8D22D009D68F5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ECA1AFB1CD8D22D009D68F5 /* Images.xcassets */; };
+		1ECA1B021CD8F62A009D68F5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA1B011CD8F62A009D68F5 /* HomeViewController.swift */; };
+		1ECA1B041CD8F65E009D68F5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA1B031CD8F65E009D68F5 /* HomeViewModel.swift */; };
+		1ECA1B061CD8F724009D68F5 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA1B051CD8F724009D68F5 /* GraphViewController.swift */; };
+		1ECA1B091CD8F759009D68F5 /* GraphViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA1B081CD8F759009D68F5 /* GraphViewModel.swift */; };
+		1ECA1B0B1CD8F7F2009D68F5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA1B0A1CD8F7F2009D68F5 /* SignUpViewController.swift */; };
+		1ECA1B0E1CD8F812009D68F5 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA1B0D1CD8F812009D68F5 /* SignUpViewModel.swift */; };
+		1ECA1B1A1CD8FA22009D68F5 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA1B191CD8FA22009D68F5 /* UserModel.swift */; };
+		1ECA1B1D1CD8FA43009D68F5 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA1B1C1CD8FA43009D68F5 /* WebService.swift */; };
+		1ECA1B1F1CD9DC58009D68F5 /* ScaleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA1B1E1CD9DC58009D68F5 /* ScaleModel.swift */; };
+		1ECA1B231CD9E19B009D68F5 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA1B221CD9E19B009D68F5 /* Route.swift */; };
+		CCF393CBC8C225A1E115FAEE /* Pods_KnowYourWeight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B721DA82B5CAEF6B1C38E904 /* Pods_KnowYourWeight.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +52,7 @@
 /* Begin PBXFileReference section */
 		1E4676311CD6401500CBFBBC /* KnowYourWeight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnowYourWeight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E4676341CD6401500CBFBBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1E4676361CD6401500CBFBBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1E4676391CD6401500CBFBBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1E46763B1CD6401500CBFBBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E46763E1CD6401500CBFBBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E4676401CD6401500CBFBBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E4676451CD6401500CBFBBC /* KnowYourWeightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KnowYourWeightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +61,27 @@
 		1E4676501CD6401500CBFBBC /* KnowYourWeightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KnowYourWeightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E4676541CD6401500CBFBBC /* KnowYourWeightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowYourWeightUITests.swift; sourceTree = "<group>"; };
 		1E4676561CD6401500CBFBBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EACA0271CD64F7C00317F26 /* UserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
+		1EACA0291CD6506000317F26 /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		1EACA0301CD74A9500317F26 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		1EACA0321CD74A9A00317F26 /* Bond.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bond.framework; path = "Pods/../build/Debug-iphoneos/Bond/Bond.framework"; sourceTree = "<group>"; };
+		1EACA0341CD74AAC00317F26 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = "Pods/../build/Debug-iphoneos/CryptoSwift/CryptoSwift.framework"; sourceTree = "<group>"; };
+		1EACA0361CD74BE400317F26 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		1ECA1AF51CD78ECF009D68F5 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = "../Library/Developer/Xcode/DerivedData/KnowYourWeight-axqghxhyejlpwzbxypbfnfiwoefs/Build/Products/Debug-iphonesimulator/ObjectMapper/ObjectMapper.framework"; sourceTree = "<group>"; };
+		1ECA1AFB1CD8D22D009D68F5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1ECA1B011CD8F62A009D68F5 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Home/HomeViewController.swift; sourceTree = "<group>"; };
+		1ECA1B031CD8F65E009D68F5 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = Home/HomeViewModel.swift; sourceTree = "<group>"; };
+		1ECA1B051CD8F724009D68F5 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphViewController.swift; path = Graph/GraphViewController.swift; sourceTree = "<group>"; };
+		1ECA1B081CD8F759009D68F5 /* GraphViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphViewModel.swift; path = Graph/GraphViewModel.swift; sourceTree = "<group>"; };
+		1ECA1B0A1CD8F7F2009D68F5 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = SignUp/SignUpViewController.swift; sourceTree = "<group>"; };
+		1ECA1B0D1CD8F812009D68F5 /* SignUpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewModel.swift; path = SignUp/SignUpViewModel.swift; sourceTree = "<group>"; };
+		1ECA1B191CD8FA22009D68F5 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		1ECA1B1C1CD8FA43009D68F5 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		1ECA1B1E1CD9DC58009D68F5 /* ScaleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleModel.swift; sourceTree = "<group>"; };
+		1ECA1B221CD9E19B009D68F5 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		6D4C0399D5F5E73CC9AE0D9F /* Pods-KnowYourWeight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KnowYourWeight.release.xcconfig"; path = "Pods/Target Support Files/Pods-KnowYourWeight/Pods-KnowYourWeight.release.xcconfig"; sourceTree = "<group>"; };
+		B721DA82B5CAEF6B1C38E904 /* Pods_KnowYourWeight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KnowYourWeight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8EEC3C8771CD9D7C1A3F0CC /* Pods-KnowYourWeight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KnowYourWeight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KnowYourWeight/Pods-KnowYourWeight.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +89,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ECA1AF61CD78ED0009D68F5 /* ObjectMapper.framework in Frameworks */,
+				1EACA0371CD74BE400317F26 /* Alamofire.framework in Frameworks */,
+				1EACA0351CD74AAC00317F26 /* CryptoSwift.framework in Frameworks */,
+				1EACA0331CD74A9A00317F26 /* Bond.framework in Frameworks */,
+				CCF393CBC8C225A1E115FAEE /* Pods_KnowYourWeight.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +117,13 @@
 		1E4676281CD6401500CBFBBC = {
 			isa = PBXGroup;
 			children = (
+				1ECA1AFB1CD8D22D009D68F5 /* Images.xcassets */,
 				1E4676331CD6401500CBFBBC /* KnowYourWeight */,
 				1E4676481CD6401500CBFBBC /* KnowYourWeightTests */,
 				1E4676531CD6401500CBFBBC /* KnowYourWeightUITests */,
 				1E4676321CD6401500CBFBBC /* Products */,
+				97EAF0ECC1DF1D817C2B59FA /* Pods */,
+				B79AFBA9AA4E6522BD8D182B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +140,10 @@
 		1E4676331CD6401500CBFBBC /* KnowYourWeight */ = {
 			isa = PBXGroup;
 			children = (
-				1E4676341CD6401500CBFBBC /* AppDelegate.swift */,
-				1E4676361CD6401500CBFBBC /* ViewController.swift */,
-				1E4676381CD6401500CBFBBC /* Main.storyboard */,
-				1E46763B1CD6401500CBFBBC /* Assets.xcassets */,
-				1E46763D1CD6401500CBFBBC /* LaunchScreen.storyboard */,
-				1E4676401CD6401500CBFBBC /* Info.plist */,
+				1ECA1B211CD9DC98009D68F5 /* Core */,
+				1ECA1B1B1CD8FA43009D68F5 /* WebService */,
+				1ECA1B181CD8FA22009D68F5 /* Model */,
+				1EACA0241CD6423500317F26 /* Scene */,
 			);
 			path = KnowYourWeight;
 			sourceTree = "<group>";
@@ -125,6 +166,104 @@
 			path = KnowYourWeightUITests;
 			sourceTree = "<group>";
 		};
+		1EACA0241CD6423500317F26 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				1ECA1B0C1CD8F7F6009D68F5 /* SignUp */,
+				1ECA1B071CD8F73C009D68F5 /* Graph */,
+				1EACA0261CD642C200317F26 /* Home */,
+				1EACA0251CD642B200317F26 /* ListUser */,
+			);
+			name = Scene;
+			sourceTree = "<group>";
+		};
+		1EACA0251CD642B200317F26 /* ListUser */ = {
+			isa = PBXGroup;
+			children = (
+				1EACA0271CD64F7C00317F26 /* UserTableViewController.swift */,
+				1EACA0291CD6506000317F26 /* UserViewModel.swift */,
+			);
+			path = ListUser;
+			sourceTree = "<group>";
+		};
+		1EACA0261CD642C200317F26 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1ECA1B011CD8F62A009D68F5 /* HomeViewController.swift */,
+				1ECA1B031CD8F65E009D68F5 /* HomeViewModel.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		1ECA1B071CD8F73C009D68F5 /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				1ECA1B051CD8F724009D68F5 /* GraphViewController.swift */,
+				1ECA1B081CD8F759009D68F5 /* GraphViewModel.swift */,
+			);
+			name = Graph;
+			sourceTree = "<group>";
+		};
+		1ECA1B0C1CD8F7F6009D68F5 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				1ECA1B0A1CD8F7F2009D68F5 /* SignUpViewController.swift */,
+				1ECA1B0D1CD8F812009D68F5 /* SignUpViewModel.swift */,
+			);
+			name = SignUp;
+			sourceTree = "<group>";
+		};
+		1ECA1B181CD8FA22009D68F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1ECA1B191CD8FA22009D68F5 /* UserModel.swift */,
+				1ECA1B1E1CD9DC58009D68F5 /* ScaleModel.swift */,
+			);
+			path = Model;
+			sourceTree = SOURCE_ROOT;
+		};
+		1ECA1B1B1CD8FA43009D68F5 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				1ECA1B1C1CD8FA43009D68F5 /* WebService.swift */,
+			);
+			path = WebService;
+			sourceTree = SOURCE_ROOT;
+		};
+		1ECA1B211CD9DC98009D68F5 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				1E4676341CD6401500CBFBBC /* AppDelegate.swift */,
+				1E4676381CD6401500CBFBBC /* Main.storyboard */,
+				1E46763D1CD6401500CBFBBC /* LaunchScreen.storyboard */,
+				1E4676401CD6401500CBFBBC /* Info.plist */,
+				1ECA1B221CD9E19B009D68F5 /* Route.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		97EAF0ECC1DF1D817C2B59FA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8EEC3C8771CD9D7C1A3F0CC /* Pods-KnowYourWeight.debug.xcconfig */,
+				6D4C0399D5F5E73CC9AE0D9F /* Pods-KnowYourWeight.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B79AFBA9AA4E6522BD8D182B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1ECA1AF51CD78ECF009D68F5 /* ObjectMapper.framework */,
+				1EACA0361CD74BE400317F26 /* Alamofire.framework */,
+				1EACA0341CD74AAC00317F26 /* CryptoSwift.framework */,
+				1EACA0321CD74A9A00317F26 /* Bond.framework */,
+				1EACA0301CD74A9500317F26 /* Alamofire.framework */,
+				B721DA82B5CAEF6B1C38E904 /* Pods_KnowYourWeight.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +271,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E4676591CD6401500CBFBBC /* Build configuration list for PBXNativeTarget "KnowYourWeight" */;
 			buildPhases = (
+				157172989B451BFC32FA731C /* 📦 Check Pods Manifest.lock */,
 				1E46762D1CD6401500CBFBBC /* Sources */,
 				1E46762E1CD6401500CBFBBC /* Frameworks */,
 				1E46762F1CD6401500CBFBBC /* Resources */,
+				76A70C2ABD2A11DD294FFF05 /* 📦 Embed Pods Frameworks */,
+				648E81B5148BD540F1B9BC39 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +335,7 @@
 				TargetAttributes = {
 					1E4676301CD6401500CBFBBC = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = B49WBAMKUU;
 					};
 					1E4676441CD6401500CBFBBC = {
 						CreatedOnToolsVersion = 7.2;
@@ -229,8 +372,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ECA1AFC1CD8D22D009D68F5 /* Images.xcassets in Resources */,
 				1E46763F1CD6401500CBFBBC /* LaunchScreen.storyboard in Resources */,
-				1E46763C1CD6401500CBFBBC /* Assets.xcassets in Resources */,
 				1E46763A1CD6401500CBFBBC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,12 +394,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		157172989B451BFC32FA731C /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		648E81B5148BD540F1B9BC39 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KnowYourWeight/Pods-KnowYourWeight-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76A70C2ABD2A11DD294FFF05 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KnowYourWeight/Pods-KnowYourWeight-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1E46762D1CD6401500CBFBBC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E4676371CD6401500CBFBBC /* ViewController.swift in Sources */,
+				1ECA1B0B1CD8F7F2009D68F5 /* SignUpViewController.swift in Sources */,
+				1ECA1B061CD8F724009D68F5 /* GraphViewController.swift in Sources */,
+				1EACA02A1CD6506000317F26 /* UserViewModel.swift in Sources */,
+				1ECA1B041CD8F65E009D68F5 /* HomeViewModel.swift in Sources */,
+				1ECA1B231CD9E19B009D68F5 /* Route.swift in Sources */,
+				1ECA1B091CD8F759009D68F5 /* GraphViewModel.swift in Sources */,
+				1ECA1B1D1CD8FA43009D68F5 /* WebService.swift in Sources */,
+				1EACA0281CD64F7C00317F26 /* UserTableViewController.swift in Sources */,
+				1ECA1B021CD8F62A009D68F5 /* HomeViewController.swift in Sources */,
+				1ECA1B1F1CD9DC58009D68F5 /* ScaleModel.swift in Sources */,
+				1ECA1B0E1CD8F812009D68F5 /* SignUpViewModel.swift in Sources */,
+				1ECA1B1A1CD8FA22009D68F5 /* UserModel.swift in Sources */,
 				1E4676351CD6401500CBFBBC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,23 +599,45 @@
 		};
 		1E46765A1CD6401500CBFBBC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8EEC3C8771CD9D7C1A3F0CC /* Pods-KnowYourWeight.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Alamofire",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Bond",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/CryptoSwift",
+				);
 				INFOPLIST_FILE = KnowYourWeight/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lnknguyen.KnowYourWeight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		1E46765B1CD6401500CBFBBC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D4C0399D5F5E73CC9AE0D9F /* Pods-KnowYourWeight.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Alamofire",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Bond",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/CryptoSwift",
+				);
 				INFOPLIST_FILE = KnowYourWeight/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lnknguyen.KnowYourWeight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -484,6 +708,7 @@
 				1E46765B1CD6401500CBFBBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1E46765C1CD6401500CBFBBC /* Build configuration list for PBXNativeTarget "KnowYourWeightTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +717,7 @@
 				1E46765E1CD6401500CBFBBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1E46765F1CD6401500CBFBBC /* Build configuration list for PBXNativeTarget "KnowYourWeightUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +726,7 @@
 				1E4676611CD6401500CBFBBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
