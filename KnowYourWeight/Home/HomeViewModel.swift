@@ -9,5 +9,9 @@
 import UIKit
 
 class HomeViewModel: NSObject {
-
+    var user: User?
+    
+    override init(){
+    
+    }
 }

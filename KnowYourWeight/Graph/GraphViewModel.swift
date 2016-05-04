@@ -9,14 +9,16 @@
 import UIKit
 
 class GraphViewModel{
-    var scaleData : [Scale]?
+    var scaleData : [Scale]
+    var user: User?
     
     init(){
         scaleData = []
+        
     }
     
     func loadScaleData(completionHandler:()->Void = {}){
-        WebService.instance.queryForGetUserData("Danh") { (data, error) in
+        WebService.instance.queryForGetUserData(user!.name.value) { (data, error) in
             if (error == nil){
                 self.scaleData = data
                 completionHandler()

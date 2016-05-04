@@ -10,8 +10,8 @@ import UIKit
 import Bond
 class HomeViewController: UIViewController {
 
-    var user: User?
     
+    var viewModel = HomeViewModel()
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var idLabel: UILabel!
@@ -30,16 +30,16 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         
-        let currWeight = (user!.goalWeight.value)
-        let height = (user!.height.value)
+        let currWeight = (viewModel.user!.goalWeight.value)
+        let height = (viewModel.user!.height.value)
         let bmi = currWeight / (height*height)
         let bmiStr = String(format: "BMI: %.2f",bmi)
         
-        nameLabel.text = user!.name.value
-        idLabel.text = "ID: \(user!.id)"
-        goalWeightLabel.text = "Goal weight: \(user!.goalWeight.value)"
-        goalDayLabel.text = "Goal day: \(user!.goalDay.value)"
-        heightLabel.text = "Height: \(user!.height.value)"
+        nameLabel.text = viewModel.user!.name.value
+        idLabel.text = "ID: \(viewModel.user!.id)"
+        goalWeightLabel.text = "Goal weight: \(viewModel.user!.goalWeight.value)"
+        goalDayLabel.text = "Goal day: \(viewModel.user!.goalDay.value)"
+        heightLabel.text = "Height: \(viewModel.user!.height.value)"
         ibmLabel.text = bmiStr
     }
     

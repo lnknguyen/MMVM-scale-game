@@ -56,13 +56,19 @@ class UserTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == Route.FROM_USERLIST_TO_HOME{
             let tabBarVc = segue.destinationViewController as! UITabBarController
-            let destionationVc = tabBarVc.viewControllers?.first as! HomeViewController
+            let destinationVc1 = tabBarVc.viewControllers![0] as! HomeViewController
+            let destinationVc2 = tabBarVc.viewControllers![1] as! GraphViewController
             
             let index = self.tableView.indexPathForSelectedRow?.row
             let user = viewModel.users![index!]
             
-            print(destionationVc)
-            destionationVc.user = user
+            let homeViewModel = HomeViewModel()
+            let graphViewModel = GraphViewModel()
+            homeViewModel.user = user
+            graphViewModel.user = user
+            
+            destinationVc1.viewModel = homeViewModel
+            destinationVc2.viewModel = graphViewModel
             
             
         }

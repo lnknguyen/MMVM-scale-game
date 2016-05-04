@@ -49,7 +49,7 @@ class WebService: NSObject{
     func queryForGetUserData(username: String, completionHandler: (Array<Scale>,NSError?) -> Void){
         let params : [String:String] = ["username" : username]
         
-        Alamofire.request(.GET,BASE_API+"/scale",parameters: params)
+        Alamofire.request(.GET,BASE_API+"/scale/" + username,parameters: params)
         .validate()
         .responseJSON { (response) in
             if let json = response.result.value{

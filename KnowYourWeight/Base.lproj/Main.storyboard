@@ -50,7 +50,7 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="User" id="UuX-2I-TEq">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="bex-s0-a9F">
-                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="eCU-kn-doJ" kind="presentation" identifier="unwindToUserList" modalPresentationStyle="fullScreen" id="uKR-EU-4fm"/>
                             </connections>
@@ -149,19 +149,18 @@
                         <viewControllerLayoutGuide type="top" id="f3a-9d-F6k"/>
                         <viewControllerLayoutGuide type="bottom" id="z13-iT-qH2"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8Ot-UX-0js">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <view key="view" contentMode="scaleToFill" id="5qg-Ur-CIy">
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Graph" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kFh-7F-AyN">
-                                <rect key="frame" x="160" y="162" width="48" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JS5-0R-dAh" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Graph" image="Line Chart-20" id="8HN-ow-Ws1">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
@@ -169,19 +168,24 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="lineChartView" destination="JS5-0R-dAh" id="f58-Gn-Th8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1rf-8C-9cC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2235.5" y="-335.5"/>
+            <point key="canvasLocation" x="2285.5" y="-305.5"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tabbar View Controller-->
         <scene sceneID="5wE-XG-hMX">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="AV3-Hf-6Ib" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="AV3-Hf-6Ib" customClass="TabbarViewController" customModule="KnowYourWeight" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="k1u-K1-twH">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="selectedImageTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
@@ -277,12 +281,16 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JCL-bI-o15" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pCv-Wl-NvO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="pCv-Wl-NvO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
