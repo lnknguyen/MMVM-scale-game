@@ -22,7 +22,10 @@ class UserTableViewController: UITableViewController {
         refresh.addTarget(self, action: #selector(UserTableViewController.refresh), forControlEvents: UIControlEvents.ValueChanged)
         self.refreshControl = refresh
         
-       // WebService.instance.queryForGetUserData("Danh") { _,_ in }
+        self.tableView.separatorColor = UIColor.clearColor()
+        Utility.setTableViewBackgroundGradient(self, UIColor.darkGrayColor(), UIColor.brownColor())
+        
+        Utility.getCurrentDate()
         
     }
     
@@ -95,7 +98,7 @@ class UserTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        
         return viewModel.users!.count
     }
 
@@ -105,9 +108,8 @@ class UserTableViewController: UITableViewController {
 
         let user = viewModel.users![indexPath.row]
         cell.textLabel?.text = user.name.value
-        cell.detailTextLabel?.text = String(user.id)
-        // Configure the cell...
-
+        cell.detailTextLabel?.text = ""
+        cell.backgroundColor = UIColor.clearColor()
         return cell
     }
     /*

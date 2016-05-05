@@ -56,6 +56,7 @@ class GraphViewController: UIViewController, ChartViewDelegate {
         lineChartView.noDataText = "No data provided"
         let goal : Double = Double(viewModel.user!.goalWeight.value)
         let ll = ChartLimitLine(limit: goal, label: "Goal")
+        ll.valueFont = UIFont(name: "American Typewriter", size: 13)!
         
         //x--axis
         lineChartView.xAxis.labelPosition = .Bottom
@@ -69,35 +70,53 @@ class GraphViewController: UIViewController, ChartViewDelegate {
         lineChartView.leftAxis.axisMinValue = 0
         lineChartView.leftAxis.axisMaxValue = 200
         lineChartView.leftAxis.axisLineColor = UIColor.redColor()
+        lineChartView.leftAxis.labelFont = UIFont(name: "American Typewriter", size: 16)!
         
         //gesture
         lineChartView.dragEnabled = true
         lineChartView.pinchZoomEnabled = true
         lineChartView.setScaleEnabled(true)
         
-        lineChartView.backgroundColor = UIColor(red: 189/255, green: 195/255, blue: 199/255, alpha: 1)
+        //lineChartView.backgroundColor = UIColor(red: 189/255, green: 195/255, blue: 199/255, alpha: 1)
+        let tmp: UIImage =  Utility.imageWithImage(UIImage(named: "blurred-background-1")!,scaledToSize: self.view.bounds.size)
+        lineChartView.backgroundColor = UIColor.init(patternImage:tmp)
+        lineChartView.delegate = self
+        lineChartView.descriptionText = ""
+    
+        
     }
     
     func setupChartData(xData: [String], yData: [Float]){
         var dataEntries : [ChartDataEntry] = []
+        
         for i in 0..<yData.count{
             let dataEntry = ChartDataEntry(value: Double(yData[i]), xIndex: i)
+            
             dataEntries.append(dataEntry)
         }
         let chartDataSet = LineChartDataSet(yVals: dataEntries, label: "ID")
-        chartDataSet.colors = ChartColorTemplates.liberty()
+        
+        chartDataSet.setColor(UIColor.brownColor())
+        chartDataSet.circleRadius = 6.0
+        chartDataSet.setCircleColor(UIColor.brownColor())
+        chartDataSet.lineWidth = 5.0
+        chartDataSet.drawValuesEnabled = false
+        //chartDataSet.circleHoleColor = UIColor.brownColor()
+        //chartDataSet.colors = ChartColorTemplates.liberty()
+        
         let chartData = LineChartData(xVals: xAxisData, dataSets: [chartDataSet])
         lineChartView.data = chartData
-        lineChartView.animate(xAxisDuration: 2.0,easingOption: .EaseInCubic)
+        lineChartView.animate(xAxisDuration: 2.0,easingOption: .EaseInOutQuart)
     }
     
     
-    
+    //MARK: Chart view delegate
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    //TODO: Implement delegate
     
 
 

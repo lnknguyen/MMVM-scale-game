@@ -41,10 +41,25 @@ class WebService: NSObject{
         }
     }
     
-    func queryForRegisterUser(){}
+    func queryForRegisterUser(user: User,completionHandler: (NSError?) -> Void){
+        let params = ["name": "",
+                    "height": "",
+                    "goal_day": "",
+                    "register_day": Utility.getCurrentDate(),
+                    "password": "",
+                    "status":false]
+        Alamofire.request(.POST, BASE_API+"/user", parameters: params as? [String : AnyObject])
+        .validate()
+        .response { (req, res, data, err) in
+            
+        }
+ 
+    }
     
     
-    func queryForLoginUser(username: String, password: String){}
+    func queryForLoginUser(username: String, password: String){
+    
+    }
     
     func queryForGetUserData(username: String, completionHandler: (Array<Scale>,NSError?) -> Void){
         let params : [String:String] = ["username" : username]
@@ -53,7 +68,6 @@ class WebService: NSObject{
         .validate()
         .responseJSON { (response) in
             if let json = response.result.value{
-                print(json)
                 let list: Array<Scale> = Mapper<Scale>().mapArray(json)!
                 completionHandler(list,nil)
             }else{

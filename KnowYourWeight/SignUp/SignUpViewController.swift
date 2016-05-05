@@ -10,10 +10,18 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
+    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var heighttextField: UITextField!
+    @IBOutlet weak var goalDayTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let tmp: UIImage =  Utility.imageWithImage(UIImage(named: "blurred-background-1")!,scaledToSize: self.view.bounds.size)
+        self.view.backgroundColor = UIColor.init(patternImage:tmp)
     }
 
     override func didReceiveMemoryWarning() {

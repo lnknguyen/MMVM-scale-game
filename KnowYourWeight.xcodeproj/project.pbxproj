@@ -28,6 +28,7 @@
 		1ECA1B231CD9E19B009D68F5 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA1B221CD9E19B009D68F5 /* Route.swift */; };
 		1ECA1B251CD9E860009D68F5 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECA1B241CD9E860009D68F5 /* Charts.framework */; };
 		1ECA1B271CDA74C6009D68F5 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA1B261CDA74C6009D68F5 /* TabbarViewController.swift */; };
+		1ECA1B291CDB24B0009D68F5 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA1B281CDB24B0009D68F5 /* Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		1ECA1B221CD9E19B009D68F5 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		1ECA1B241CD9E860009D68F5 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "../Library/Developer/Xcode/DerivedData/KnowYourWeight-axqghxhyejlpwzbxypbfnfiwoefs/Build/Products/Debug-iphonesimulator/Charts/Charts.framework"; sourceTree = "<group>"; };
 		1ECA1B261CDA74C6009D68F5 /* TabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
+		1ECA1B281CDB24B0009D68F5 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		6D4C0399D5F5E73CC9AE0D9F /* Pods-KnowYourWeight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KnowYourWeight.release.xcconfig"; path = "Pods/Target Support Files/Pods-KnowYourWeight/Pods-KnowYourWeight.release.xcconfig"; sourceTree = "<group>"; };
 		E8EEC3C8771CD9D7C1A3F0CC /* Pods-KnowYourWeight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KnowYourWeight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KnowYourWeight/Pods-KnowYourWeight.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -231,6 +233,7 @@
 				1E4676401CD6401500CBFBBC /* Info.plist */,
 				1ECA1B221CD9E19B009D68F5 /* Route.swift */,
 				1ECA1B261CDA74C6009D68F5 /* TabbarViewController.swift */,
+				1ECA1B281CDB24B0009D68F5 /* Utility.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				1ECA1B271CDA74C6009D68F5 /* TabbarViewController.swift in Sources */,
 				1EACA02A1CD6506000317F26 /* UserViewModel.swift in Sources */,
 				1ECA1B041CD8F65E009D68F5 /* HomeViewModel.swift in Sources */,
+				1ECA1B291CDB24B0009D68F5 /* Utility.swift in Sources */,
 				1ECA1B231CD9E19B009D68F5 /* Route.swift in Sources */,
 				1ECA1B091CD8F759009D68F5 /* GraphViewModel.swift in Sources */,
 				1ECA1B1D1CD8FA43009D68F5 /* WebService.swift in Sources */,
