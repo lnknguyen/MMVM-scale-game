@@ -29,6 +29,11 @@
 		1ECA1B251CD9E860009D68F5 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECA1B241CD9E860009D68F5 /* Charts.framework */; };
 		1ECA1B271CDA74C6009D68F5 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA1B261CDA74C6009D68F5 /* TabbarViewController.swift */; };
 		1ECA1B291CDB24B0009D68F5 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA1B281CDB24B0009D68F5 /* Utility.swift */; };
+		1ECA1B791CDBE3EA009D68F5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA1B781CDBE3EA009D68F5 /* LoginViewController.swift */; };
+		1ECA1B7B1CDBE410009D68F5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA1B7A1CDBE410009D68F5 /* LoginViewModel.swift */; };
+		1ECA1B7F1CDBF14B009D68F5 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECA1B7E1CDBF14B009D68F5 /* Bond.framework */; };
+		1ECA1B811CDBF15A009D68F5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECA1B801CDBF15A009D68F5 /* Alamofire.framework */; };
+		1ECA1B831CDC6BBF009D68F5 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECA1B821CDC6BBF009D68F5 /* CryptoSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +82,11 @@
 		1ECA1B241CD9E860009D68F5 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "../Library/Developer/Xcode/DerivedData/KnowYourWeight-axqghxhyejlpwzbxypbfnfiwoefs/Build/Products/Debug-iphonesimulator/Charts/Charts.framework"; sourceTree = "<group>"; };
 		1ECA1B261CDA74C6009D68F5 /* TabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		1ECA1B281CDB24B0009D68F5 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		1ECA1B781CDBE3EA009D68F5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Login/LoginViewController.swift; sourceTree = "<group>"; };
+		1ECA1B7A1CDBE410009D68F5 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewModel.swift; path = KnowYourWeight/Login/LoginViewModel.swift; sourceTree = SOURCE_ROOT; };
+		1ECA1B7E1CDBF14B009D68F5 /* Bond.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bond.framework; path = "../Library/Developer/Xcode/DerivedData/KnowYourWeight-axqghxhyejlpwzbxypbfnfiwoefs/Build/Products/Debug-iphonesimulator/Bond/Bond.framework"; sourceTree = "<group>"; };
+		1ECA1B801CDBF15A009D68F5 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../Library/Developer/Xcode/DerivedData/KnowYourWeight-axqghxhyejlpwzbxypbfnfiwoefs/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		1ECA1B821CDC6BBF009D68F5 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = "../Library/Developer/Xcode/DerivedData/KnowYourWeight-axqghxhyejlpwzbxypbfnfiwoefs/Build/Products/Debug-iphonesimulator/CryptoSwift/CryptoSwift.framework"; sourceTree = "<group>"; };
 		6D4C0399D5F5E73CC9AE0D9F /* Pods-KnowYourWeight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KnowYourWeight.release.xcconfig"; path = "Pods/Target Support Files/Pods-KnowYourWeight/Pods-KnowYourWeight.release.xcconfig"; sourceTree = "<group>"; };
 		E8EEC3C8771CD9D7C1A3F0CC /* Pods-KnowYourWeight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KnowYourWeight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KnowYourWeight/Pods-KnowYourWeight.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +96,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ECA1B831CDC6BBF009D68F5 /* CryptoSwift.framework in Frameworks */,
+				1ECA1B811CDBF15A009D68F5 /* Alamofire.framework in Frameworks */,
+				1ECA1B7F1CDBF14B009D68F5 /* Bond.framework in Frameworks */,
 				1ECA1B251CD9E860009D68F5 /* Charts.framework in Frameworks */,
 				1ECA1AF61CD78ED0009D68F5 /* ObjectMapper.framework in Frameworks */,
 			);
@@ -163,6 +176,7 @@
 		1EACA0241CD6423500317F26 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				1ECA1B7D1CDBE44C009D68F5 /* Login */,
 				1ECA1B0C1CD8F7F6009D68F5 /* SignUp */,
 				1ECA1B071CD8F73C009D68F5 /* Graph */,
 				1EACA0261CD642C200317F26 /* Home */,
@@ -238,6 +252,15 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
+		1ECA1B7D1CDBE44C009D68F5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1ECA1B781CDBE3EA009D68F5 /* LoginViewController.swift */,
+				1ECA1B7A1CDBE410009D68F5 /* LoginViewModel.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		97EAF0ECC1DF1D817C2B59FA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +273,9 @@
 		B79AFBA9AA4E6522BD8D182B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1ECA1B821CDC6BBF009D68F5 /* CryptoSwift.framework */,
+				1ECA1B801CDBF15A009D68F5 /* Alamofire.framework */,
+				1ECA1B7E1CDBF14B009D68F5 /* Bond.framework */,
 				1ECA1B241CD9E860009D68F5 /* Charts.framework */,
 				1ECA1AF51CD78ECF009D68F5 /* ObjectMapper.framework */,
 			);
@@ -449,8 +475,10 @@
 				1ECA1B091CD8F759009D68F5 /* GraphViewModel.swift in Sources */,
 				1ECA1B1D1CD8FA43009D68F5 /* WebService.swift in Sources */,
 				1EACA0281CD64F7C00317F26 /* UserTableViewController.swift in Sources */,
+				1ECA1B7B1CDBE410009D68F5 /* LoginViewModel.swift in Sources */,
 				1ECA1B021CD8F62A009D68F5 /* HomeViewController.swift in Sources */,
 				1ECA1B1F1CD9DC58009D68F5 /* ScaleModel.swift in Sources */,
+				1ECA1B791CDBE3EA009D68F5 /* LoginViewController.swift in Sources */,
 				1ECA1B0E1CD8F812009D68F5 /* SignUpViewModel.swift in Sources */,
 				1ECA1B1A1CD8FA22009D68F5 /* UserModel.swift in Sources */,
 				1E4676351CD6401500CBFBBC /* AppDelegate.swift in Sources */,
@@ -610,6 +638,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = lnknguyen.KnowYourWeight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -632,6 +661,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = lnknguyen.KnowYourWeight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

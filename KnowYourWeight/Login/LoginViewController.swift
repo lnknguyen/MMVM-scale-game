@@ -1,42 +1,32 @@
 //
-//  SignUpViewController.swift
+//  LoginViewController.swift
 //  KnowYourWeight
 //
-//  Created by Nguyen Luong on 5/3/16.
+//  Created by Nguyen Luong on 5/5/16.
 //  Copyright © 2016 Nguyen Luong. All rights reserved.
 //
 
 import UIKit
-import Bond
-class SignUpViewController: UIViewController {
 
-    @IBOutlet weak var cancelButton: UIButton!
-    @IBOutlet weak var doneButton: UIButton!
+class LoginViewController: UIViewController {
+
+    @IBOutlet weak var okButton: UIButton!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var heighttextField: UITextField!
-    @IBOutlet weak var goalDayTextField: UITextField!
-    @IBOutlet weak var confirmPasswordTextField: UITextField!
-    let viewModel = SignUpViewModel()
+    
+    let viewModel = LoginViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let tmp: UIImage =  Utility.imageWithImage(UIImage(named: "blurred-background-1")!,scaledToSize: self.view.bounds.size)
         self.view.backgroundColor = UIColor.init(patternImage:tmp)
         
-        //validateSignup()
+
+        // Do any additional setup after loading the view.
     }
     
-    func validateSignup(){
-        
-        viewModel.user.name.bindTo(usernameTextField.bnd_text)
-        viewModel.user.height.bindTo(heighttextField.bnd_text.map({ (value) -> Float in
-            return Float(value!)!
-        }))
-        viewModel.user.goalDay.bindTo(goalDayTextField.bnd_text.map({ (value) -> Int in
-            return Int(value!)!
-        }))
-        
+    @IBAction func okButtonTapped(sender: AnyObject) {
+        viewModel.validateUserLogin(usernameTextField.bnd_text.value!, password: passwordTextField.bnd_text.value!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,7 +35,6 @@ class SignUpViewController: UIViewController {
     }
     
 
-   
     /*
     // MARK: - Navigation
 

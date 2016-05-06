@@ -29,6 +29,10 @@ class User: Mappable{
         goalWeight.value <- map["goal_weight"]
         
     }
+    
+    init(){
+        
+    }
     /*
     init(name: String?, height: Float, id: Int, goalDay: Int, goalWeight: Float){
         self.name = name

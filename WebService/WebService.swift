@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import ObjectMapper
+import CryptoSwift
 
 class WebService: NSObject{
     static let  instance = WebService()
@@ -57,8 +58,30 @@ class WebService: NSObject{
     }
     
     
-    func queryForLoginUser(username: String, password: String){
-    
+    func queryForLoginUser(username: String, password: String, completionHandler: (User?,NSError?)->Void){
+        //let params = ["username": username,
+        //              "password": password.sha1()]
+        let params = ["username": "testing",
+                      "password": "40bd001563085fc35165329ea1ff5c5ecbdbbeef"]
+       
+        Alamofire.request(.POST,BASE_API+"/user/login",parameters: params, encoding: .URL)
+            .response(completionHandler: { (req, res, data, error) in
+            print("res \(res?.statusCode)")
+          
+        })
+            /*
+        //.validate()
+        .responseJSON { (response) in
+            print("response \(response)")
+            if let json = response.result.value{
+                let user: User = Mapper<User>().map(json)!
+                completionHandler(user,nil)
+                print("ok \(response.result.value)")
+            }else{
+                completionHandler(nil,response.result.error)
+                print("fail \(response)")
+            }
+        }*/
     }
     
     func queryForGetUserData(username: String, completionHandler: (Array<Scale>,NSError?) -> Void){

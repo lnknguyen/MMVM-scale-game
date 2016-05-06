@@ -8,6 +8,20 @@
 
 import UIKit
 
-class SignUpViewModel: NSObject {
-
+class SignUpViewModel {
+    var user : User
+    
+    init(){
+        user = User()
+    }
+    
+    func signupForUser(){
+        WebService.instance.queryForRegisterUser(user) { (error) in
+            if ((error == nil)){
+                print("Sign up successful")
+            }else {
+                print("Sign up failed")
+            }
+        }
+    }
 }
