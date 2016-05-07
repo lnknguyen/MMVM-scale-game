@@ -7,7 +7,7 @@ target 'KnowYourWeight' do
     pod 'Bond'
     pod 'Alamofire'
     pod 'PromiseKit'
-    #pod 'SDWebImage'
+    pod 'KVNProgress'
     pod 'ObjectMapper'
     pod 'CryptoSwift'
     pod 'Charts'

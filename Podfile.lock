@@ -5,7 +5,8 @@ PODS:
   - Charts (2.2.4):
     - Charts/Core (= 2.2.4)
   - Charts/Core (2.2.4)
-  - CryptoSwift (0.4)
+  - CryptoSwift (0.4.1)
+  - KVNProgress (2.2.4)
   - ObjectMapper (1.2.0)
   - OMGHTTPURLRQ (3.1.1):
     - OMGHTTPURLRQ/RQ (= 3.1.1)
@@ -34,6 +35,7 @@ DEPENDENCIES:
   - Cartography
   - Charts
   - CryptoSwift
+  - KVNProgress
   - ObjectMapper
   - PromiseKit
   - SwiftyJSON
@@ -43,12 +45,13 @@ SPEC CHECKSUMS:
   Bond: 55903fc67f09e8e49791a657163cabba1d6fb29d
   Cartography: 70af183a248547694a8cfaa6b989cb7e04589985
   Charts: a9e735c83c6d376ade20f6612dcf0ba217394a49
-  CryptoSwift: 584eac7d00b2f497fe7b20de271b8c0c52fff844
+  CryptoSwift: 25b5aff3f260967391f8fff2e9abe4254d2c6fd5
+  KVNProgress: 541edcea5a1fef592aceac8d791a410d38cb499d
   ObjectMapper: b1e9c7c8a9f6400b72690c80072c131504caa66f
   OMGHTTPURLRQ: 633f98ee745aeda02345935a52eec1784cddb589
   PromiseKit: 4e8127c22a9b29d1b44958ab2ec762ea6115cbfb
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: 232f1f431124bb15edb03a9c3ac871d14f49804c
+PODFILE CHECKSUM: acebf8b003614aa3ebd2a272f854c35a4d686654
 
 COCOAPODS: 1.0.0.rc.1

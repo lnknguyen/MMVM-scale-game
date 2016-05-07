@@ -43,6 +43,7 @@ class HomeViewController: UIViewController {
         let bmi = currWeight / (height*height)
         let bmiStr = String(format: "BMI: %.2f",bmi)
         let idStr = String(format: "%04d", viewModel.user!.id)
+        
         nameLabel.text = viewModel.user!.name.value
         idLabel.text = "ID:" + idStr
         goalWeightLabel.text = "Goal weight: \(viewModel.user!.goalWeight.value)"

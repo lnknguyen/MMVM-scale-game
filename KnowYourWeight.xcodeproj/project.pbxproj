@@ -34,6 +34,8 @@
 		1ECA1B7F1CDBF14B009D68F5 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECA1B7E1CDBF14B009D68F5 /* Bond.framework */; };
 		1ECA1B811CDBF15A009D68F5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECA1B801CDBF15A009D68F5 /* Alamofire.framework */; };
 		1ECA1B831CDC6BBF009D68F5 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECA1B821CDC6BBF009D68F5 /* CryptoSwift.framework */; };
+		1EE500611CDDC4D80043D8C3 /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE500601CDDC4D80043D8C3 /* SweetAlert.swift */; };
+		E710988D6764DAB36CF6CFBD /* Pods_KnowYourWeight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE39A699851980445C80081 /* Pods_KnowYourWeight.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +89,9 @@
 		1ECA1B7E1CDBF14B009D68F5 /* Bond.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bond.framework; path = "../Library/Developer/Xcode/DerivedData/KnowYourWeight-axqghxhyejlpwzbxypbfnfiwoefs/Build/Products/Debug-iphonesimulator/Bond/Bond.framework"; sourceTree = "<group>"; };
 		1ECA1B801CDBF15A009D68F5 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../Library/Developer/Xcode/DerivedData/KnowYourWeight-axqghxhyejlpwzbxypbfnfiwoefs/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		1ECA1B821CDC6BBF009D68F5 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = "../Library/Developer/Xcode/DerivedData/KnowYourWeight-axqghxhyejlpwzbxypbfnfiwoefs/Build/Products/Debug-iphonesimulator/CryptoSwift/CryptoSwift.framework"; sourceTree = "<group>"; };
+		1EE500601CDDC4D80043D8C3 /* SweetAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SweetAlert.swift; path = ExternalLib/SweetAlert.swift; sourceTree = "<group>"; };
 		6D4C0399D5F5E73CC9AE0D9F /* Pods-KnowYourWeight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KnowYourWeight.release.xcconfig"; path = "Pods/Target Support Files/Pods-KnowYourWeight/Pods-KnowYourWeight.release.xcconfig"; sourceTree = "<group>"; };
+		ABE39A699851980445C80081 /* Pods_KnowYourWeight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KnowYourWeight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8EEC3C8771CD9D7C1A3F0CC /* Pods-KnowYourWeight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KnowYourWeight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KnowYourWeight/Pods-KnowYourWeight.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +105,7 @@
 				1ECA1B7F1CDBF14B009D68F5 /* Bond.framework in Frameworks */,
 				1ECA1B251CD9E860009D68F5 /* Charts.framework in Frameworks */,
 				1ECA1AF61CD78ED0009D68F5 /* ObjectMapper.framework in Frameworks */,
+				E710988D6764DAB36CF6CFBD /* Pods_KnowYourWeight.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +152,7 @@
 		1E4676331CD6401500CBFBBC /* KnowYourWeight */ = {
 			isa = PBXGroup;
 			children = (
+				1EE500621CDDC4E00043D8C3 /* ExternalLib */,
 				1ECA1B211CD9DC98009D68F5 /* Core */,
 				1ECA1B1B1CD8FA43009D68F5 /* WebService */,
 				1ECA1B181CD8FA22009D68F5 /* Model */,
@@ -261,6 +267,14 @@
 			name = Login;
 			sourceTree = "<group>";
 		};
+		1EE500621CDDC4E00043D8C3 /* ExternalLib */ = {
+			isa = PBXGroup;
+			children = (
+				1EE500601CDDC4D80043D8C3 /* SweetAlert.swift */,
+			);
+			name = ExternalLib;
+			sourceTree = "<group>";
+		};
 		97EAF0ECC1DF1D817C2B59FA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +292,7 @@
 				1ECA1B7E1CDBF14B009D68F5 /* Bond.framework */,
 				1ECA1B241CD9E860009D68F5 /* Charts.framework */,
 				1ECA1AF51CD78ECF009D68F5 /* ObjectMapper.framework */,
+				ABE39A699851980445C80081 /* Pods_KnowYourWeight.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -476,6 +491,7 @@
 				1ECA1B1D1CD8FA43009D68F5 /* WebService.swift in Sources */,
 				1EACA0281CD64F7C00317F26 /* UserTableViewController.swift in Sources */,
 				1ECA1B7B1CDBE410009D68F5 /* LoginViewModel.swift in Sources */,
+				1EE500611CDDC4D80043D8C3 /* SweetAlert.swift in Sources */,
 				1ECA1B021CD8F62A009D68F5 /* HomeViewController.swift in Sources */,
 				1ECA1B1F1CD9DC58009D68F5 /* ScaleModel.swift in Sources */,
 				1ECA1B791CDBE3EA009D68F5 /* LoginViewController.swift in Sources */,

@@ -54,41 +54,7 @@ class UserTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    //MARK: Navigation
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == Route.FROM_USERLIST_TO_HOME{
-            let tabBarVc = segue.destinationViewController as! UITabBarController
-            let destinationVc1 = tabBarVc.viewControllers![0] as! HomeViewController
-            let destinationVc2 = tabBarVc.viewControllers![1] as! GraphViewController
-            
-            let index = self.tableView.indexPathForSelectedRow?.row
-            let user = viewModel.users![index!]
-            
-            let homeViewModel = HomeViewModel()
-            let graphViewModel = GraphViewModel()
-            homeViewModel.user = user
-            graphViewModel.user = user
-            
-            destinationVc1.viewModel = homeViewModel
-            destinationVc2.viewModel = graphViewModel
-            
-            
-        }
-    }
     
-    
-    @IBAction func unwindToUserList(segue: UIStoryboardSegue){
-        
-    }
-    
-    @IBAction func cancelToUserList(segue: UIStoryboardSegue){
-        
-    }
-    
-    @IBAction func finishSignup(segue: UIStoryboardSegue){
-        
-    }
 
     // MARK: - Table view data source
 

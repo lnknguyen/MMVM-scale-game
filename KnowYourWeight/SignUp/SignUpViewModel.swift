@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import KVNProgress
 class SignUpViewModel {
     var user : User
     
@@ -15,12 +15,18 @@ class SignUpViewModel {
         user = User()
     }
     
-    func signupForUser(){
-        WebService.instance.queryForRegisterUser(user) { (error) in
-            if ((error == nil)){
-                print("Sign up successful")
-            }else {
-                print("Sign up failed")
+    func signUpForUserWithPassword(password: String){
+        KVNProgress.show()
+        WebService.instance.queryForRegisterUser(user, password: password) { (status, error) in
+            if (error == nil){
+                if (status){
+                    KVNProgress.showSuccessWithStatus("Register succesfully")
+                }
+                else{
+                    KVNProgress.showErrorWithStatus("Username taken")
+                }
+            }else{
+                print("Error registering")
             }
         }
     }

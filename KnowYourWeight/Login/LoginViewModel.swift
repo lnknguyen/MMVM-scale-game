@@ -7,16 +7,24 @@
 //
 
 import UIKit
-
+import KVNProgress
 class LoginViewModel: NSObject {
     var user = User()
     
-    func validateUserLogin(username: String, password: String){
+    func validateUserLogin(username: String, password: String, completionHandler:()->Void = {}){
+        KVNProgress.show()
         WebService.instance.queryForLoginUser(username, password: password) { (user, error) in
             if (error == nil){
-                self.user = user!
-                print("login ok")
+                if let usr : User = user{
+                    self.user = usr
+                    KVNProgress.showSuccess()
+                    completionHandler()
+                }else{
+                        KVNProgress.showErrorWithStatus("Password and username do not match")
+                }
+                
             }else{
+                KVNProgress.showErrorWithStatus("Problem from server")
                 print("Login fail")
             }
         }

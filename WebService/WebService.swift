@@ -24,7 +24,7 @@ class WebService: NSObject{
             .responseJSON { (response) in
                 if let json = response.result.value{
                     let list: Array<User> = Mapper<User>().mapArray(json)!
-                    completionHandler(list,nil)
+                    completionHandler(list,response.result.error)
                 } else {
                     completionHandler([],response.result.error)
                 }
@@ -34,7 +34,7 @@ class WebService: NSObject{
     
     
     
-    func queryForGetUserProfileByName(){
+    func queryForGetUserProfileByName(completionHandler: (User,NSError)->Void){
         Alamofire.request(.GET,BASE_API+"/user/"+"Danh").responseJSON { (response) in
             if let JSON = response.result.value{
                 print("User res \(JSON)")
@@ -42,60 +42,71 @@ class WebService: NSObject{
         }
     }
     
-    func queryForRegisterUser(user: User,completionHandler: (NSError?) -> Void){
-        let params = ["name": "",
-                    "height": "",
-                    "goal_day": "",
-                    "register_day": Utility.getCurrentDate(),
-                    "password": "",
-                    "status":false]
-        Alamofire.request(.POST, BASE_API+"/user", parameters: params as? [String : AnyObject])
-        .validate()
-        .response { (req, res, data, err) in
-            
+    func queryForRegisterUser(user: User,password: String,completionHandler: (status : Bool ,NSError?) -> Void){
+        let params = ["name": user.name.value,
+                      "height": user.height.value,
+                      "goal_day": user.goalDay.value,
+                      "register_day": Utility.getCurrentDate(),
+                      "password": password.sha1(),
+                      "weight":user.goalWeight.value,
+                      "status":false]
+        print(params)
+        Alamofire.request(.POST, BASE_API+"/user", parameters: params as? [String : AnyObject], encoding: .URL)
+            //.validate()
+            .response { (req, res, data, err) in
+                
+                if (err == nil){
+                    if ( res?.statusCode >= 200 && res?.statusCode <= 300){
+                        completionHandler(status: true, nil)
+                    }
+                    else{
+                        completionHandler(status: false, nil)
+                    }
+                }
+                else{
+                    
+                    completionHandler(status: false,err)
+                }
         }
- 
+        
     }
     
     
     func queryForLoginUser(username: String, password: String, completionHandler: (User?,NSError?)->Void){
-        //let params = ["username": username,
-        //              "password": password.sha1()]
-        let params = ["username": "testing",
-                      "password": "40bd001563085fc35165329ea1ff5c5ecbdbbeef"]
-       
+        let params = ["username": username,
+                      "password": password.sha1()]
+        
         Alamofire.request(.POST,BASE_API+"/user/login",parameters: params, encoding: .URL)
             .response(completionHandler: { (req, res, data, error) in
-            print("res \(res?.statusCode)")
-          
-        })
-            /*
-        //.validate()
-        .responseJSON { (response) in
-            print("response \(response)")
-            if let json = response.result.value{
-                let user: User = Mapper<User>().map(json)!
-                completionHandler(user,nil)
-                print("ok \(response.result.value)")
-            }else{
-                completionHandler(nil,response.result.error)
-                print("fail \(response)")
-            }
-        }*/
+                if (error == nil){
+                    if((res?.statusCode)!<300){
+                        Alamofire.request(.GET,self.BASE_API+"/user/"+username).responseJSON { (response) in
+                            if let JSON = response.result.value{
+                                let user = Mapper<User>().mapArray(JSON)
+                                completionHandler(user![0],error)
+                            }
+                        }
+                    }else{
+                        completionHandler(nil,error)
+                    }
+                } else{
+                    completionHandler(nil,error)
+                }
+            })
     }
     
     func queryForGetUserData(username: String, completionHandler: (Array<Scale>,NSError?) -> Void){
         let params : [String:String] = ["username" : username]
         
         Alamofire.request(.GET,BASE_API+"/scale/" + username,parameters: params)
-        .validate()
-        .responseJSON { (response) in
-            if let json = response.result.value{
-                let list: Array<Scale> = Mapper<Scale>().mapArray(json)!
-                completionHandler(list,nil)
-            }else{
-                completionHandler([],response.result.error)
-            }
+            .validate()
+            .responseJSON { (response) in
+                if let json = response.result.value{
+                    let list: Array<Scale> = Mapper<Scale>().mapArray(json)!
+                    completionHandler(list,response.result.error)
+                }else{
+                    completionHandler([],response.result.error)
+                }
         }
     }
     
