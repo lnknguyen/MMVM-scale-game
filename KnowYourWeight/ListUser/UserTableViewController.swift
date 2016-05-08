@@ -78,18 +78,34 @@ class UserTableViewController: UITableViewController {
         cell.backgroundColor = UIColor.clearColor()
         return cell
     }
-    /*
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let user = users![indexPath.row]
+        let user = viewModel.users![indexPath.row]
         
         let destinationVc = HomeViewController();
         
-        destinationVc.user = user;
+        destinationVc.viewModel.user = user;
         
-        destinationVc.performSegueWithIdentifier("fromUserListToHome", sender: self)
+        destinationVc.performSegueWithIdentifier(Route.FROM_USER_LIST_TO_USER_DETAIL, sender: self)
         
     }
-     */
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == Route.FROM_USER_LIST_TO_USER_DETAIL{
+           // let tabBarVc = segue.destinationViewController as! UITabBarController
+            let destionationVc = HomeViewController()
+            
+            let index = self.tableView.indexPathForSelectedRow?.row
+            let user = viewModel.users![index!]
+            
+            print(destionationVc)
+            destionationVc.viewModel.user = user
+            
+            
+        }
+    }
+
     
 
 }

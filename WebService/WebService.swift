@@ -14,8 +14,8 @@ import CryptoSwift
 
 class WebService: NSObject{
     static let  instance = WebService()
-    let BASE_API = "https://mysterious-inlet-23105.herokuapp.com/api/v1"
-    
+    //let BASE_API = "https://mysterious-inlet-23105.herokuapp.com/api/v1"
+    let BASE_API = "http://82.196.14.213:55184/api/v1"
     private override init(){}
     
     func queryForListUser(completionHandler: (Array<User>,NSError?) -> Void){
