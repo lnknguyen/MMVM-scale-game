@@ -1,5 +1,3 @@
-<snippet>
-  <content><![CDATA[
 # KnowYourWeight
 KnowYourWeight is an iOS project, written in Swift. The app demonstrates a simple way to implement MVVM pattern using Bond. 
 Using a readily available backend and a scale kit, the application takes users weight when they step on the scale and display them inside a graph.
@@ -14,8 +12,7 @@ Install pod and run **pod install** in your terminal
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
+
 ## License
 MIT
-]]></content>
-  <tabTrigger>readme</tabTrigger>
-</snippet>
+
