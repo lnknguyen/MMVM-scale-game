@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var okButton: UIButton!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var signUpButton: UIButton!
     
     let viewModel = LoginViewModel()
     override func viewDidLoad() {
@@ -21,15 +22,18 @@ class LoginViewController: UIViewController {
         let tmp: UIImage =  Utility.imageWithImage(UIImage(named: "blurred-background-1")!,scaledToSize: self.view.bounds.size)
         self.view.backgroundColor = UIColor.init(patternImage:tmp)
         
+        signUpButton.layer.borderColor = UIColor.whiteColor().CGColor
+        okButton.layer.borderColor = UIColor.whiteColor().CGColor
         combineLatest(usernameTextField.bnd_text, passwordTextField.bnd_text)
             .map { (username, password) -> Bool in
             return (username?.characters.count > 0 && password?.characters.count > 0)
         }.bindTo(okButton.bnd_enabled)
         
-        okButton.bnd_enabled.map { (val) -> UIColor in
-            return val ? UIColor.blackColor() : UIColor.lightGrayColor()
-        }.bindTo(okButton.bnd_backgroundColor)
         
+        okButton.bnd_enabled.map { (val) -> UIColor in
+            return val ? UIColor.init(red: 229/255, green: 229/255, blue: 229/255, alpha: 100): UIColor.clearColor()
+        }.bindTo(okButton.bnd_backgroundColor)
+    
         // Do any additional setup after loading the view.
     }
     
@@ -37,6 +41,8 @@ class LoginViewController: UIViewController {
         viewModel.validateUserLogin(usernameTextField.bnd_text.value!, password: passwordTextField.bnd_text.value!){
             self.performSegueWithIdentifier(Route.FROM_LOGIN_TO_TABBAR, sender: self)
         }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,17 +58,20 @@ class LoginViewController: UIViewController {
             let tabBarVc = segue.destinationViewController as! UITabBarController
             let destinationVc1 = tabBarVc.viewControllers![0] as! HomeViewController
             let destinationVc2 = tabBarVc.viewControllers![1] as! GraphViewController
-            
+            let destinationVc3 = tabBarVc.viewControllers![3] as! ProfileViewController
             let user = viewModel.user
             
             let homeViewModel = HomeViewModel()
             let graphViewModel = GraphViewModel()
+            let profileViewModel = ProfileViewModel()
+            
             homeViewModel.user = user
             graphViewModel.user = user
+            profileViewModel.user = user
             
             destinationVc1.viewModel = homeViewModel
             destinationVc2.viewModel = graphViewModel
-            
+            destinationVc3.viewModel = profileViewModel
             
         }
     }

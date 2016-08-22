@@ -1,8 +1,8 @@
 platform :ios, '8.0'
 use_frameworks!
 
-target 'KnowYourWeight' do
-    pod 'SwiftyJSON'
+
+    pod 'SwiftyJSON’
     pod 'Cartography'
     pod 'Bond'
     pod 'Alamofire'
@@ -13,4 +13,11 @@ target 'KnowYourWeight' do
     pod 'Charts'
 #    pod 'RxSwift',    '~> 2.0'
 #    pod 'RxCocoa',    '~> 2.0'
+
+#target 'Testing' do
+
+#end
+
+target 'KnowYourWeight' do
+
 end

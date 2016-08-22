@@ -31,12 +31,14 @@ class Utility{
         backgroundView.layer.insertSublayer(gradientLayer, atIndex: 0)
         sender.tableView.backgroundView = backgroundView
     }
-    
+    /*
+    ISO 8601 formatted date
+     */
     static func getCurrentDate()->String{
         let date = NSDate()
         let dateFormatter = NSDateFormatter()
         dateFormatter.locale = NSLocale.currentLocale()
-        dateFormatter.dateFormat = "dd/mm/yy"
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         let currentDate = dateFormatter.stringFromDate(date)
         return currentDate
     }

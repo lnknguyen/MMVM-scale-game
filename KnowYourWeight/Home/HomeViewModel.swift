@@ -10,8 +10,23 @@ import UIKit
 
 class HomeViewModel: NSObject {
     var user: User?
-    
+    var scaleData : [Scale]
     override init(){
-    
+        scaleData = []
     }
+    
+    
+    func loadScaleData(completionHandler:()->Void = {}){
+        WebService.instance.queryForGetUserData(user!.name.value) { (data, error) in
+            if (error == nil){
+                self.scaleData = data
+                completionHandler()
+            }
+            else{
+                print("Error loading scale data: \(error)")
+            }
+        }
+    }
+
+
 }

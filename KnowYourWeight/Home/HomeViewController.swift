@@ -23,6 +23,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var roundView: UIView!
     @IBOutlet weak var currentWeightLabel: UILabel!
     
+    @IBOutlet weak var statusLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -33,23 +34,50 @@ class HomeViewController: UIViewController {
         roundView.layer.borderColor = UIColor.whiteColor().CGColor
         roundView.layer.cornerRadius = roundView.bounds.size.width/2
         
+        bindViewModel()
+        
     }
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
+        var currWeight : Float = 0.0
+        bindViewModel(){
+            
+            if (self.viewModel.scaleData.count>0){
+                if let val : Float = (self.viewModel.scaleData.last?.value.value)!{
+                    currWeight = val
+                    self.currentWeightLabel.text = "\(currWeight)"
+                    let height = (self.viewModel.user!.height.value)
+                    let bmi = currWeight / (height*height)
+                    let bmiStr = String(format: "BMI: %.2f",bmi)
+                   
+                    self.ibmLabel.text = bmiStr
+                    
+                    if (bmi < 18.5 && bmi != 0.0){
+                        self.statusLabel.text = "Underweight"
+                    } else if (bmi >= 18.5 && bmi < 24.9 ){
+                        self.statusLabel.text = "Normal"
+                    } else if (bmi >= 24.9 && bmi < 29.9){
+                        self.statusLabel.text = "Overweight"
+                    } else if (bmi >= 29.9){
+                        self.statusLabel.text = "Obesity"
+                    }else{
+                        self.statusLabel.text = "No data"
+                    }
+                }
+            }
+        }
         
-        let currWeight = (viewModel.user!.goalWeight.value)
-        let height = (viewModel.user!.height.value)
-        let bmi = currWeight / (height*height)
-        let bmiStr = String(format: "BMI: %.2f",bmi)
+        
         let idStr = String(format: "%04d", viewModel.user!.id)
-        
         nameLabel.text = viewModel.user!.name.value
         idLabel.text = "ID:" + idStr
         goalWeightLabel.text = "Goal weight: \(viewModel.user!.goalWeight.value)"
         goalDayLabel.text = "Goal day: \(viewModel.user!.goalDay.value)"
         heightLabel.text = "Height: \(viewModel.user!.height.value)"
-        ibmLabel.text = bmiStr
+        
+        
+       
     }
     
     override func didReceiveMemoryWarning() {
@@ -57,15 +85,21 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func bindViewModel(completionHandler:()->Void = {}){
+        viewModel.loadScaleData(){
+            completionHandler()
+        }
+    }
 
-    /*
+
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

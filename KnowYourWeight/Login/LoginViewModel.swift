@@ -24,8 +24,8 @@ class LoginViewModel: NSObject {
                 }
                 
             }else{
-                KVNProgress.showErrorWithStatus("Problem from server")
-                print("Login fail")
+                KVNProgress.showErrorWithStatus(error?.localizedDescription)
+                print(error?.localizedDescription)
             }
         }
     }

@@ -79,31 +79,27 @@ class UserTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let user = viewModel.users![indexPath.row]
-        
-        let destinationVc = HomeViewController();
-        
-        destinationVc.viewModel.user = user;
-        
-        destinationVc.performSegueWithIdentifier(Route.FROM_USER_LIST_TO_USER_DETAIL, sender: self)
-        
-    }
-    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == Route.FROM_USER_LIST_TO_USER_DETAIL{
-           // let tabBarVc = segue.destinationViewController as! UITabBarController
-            let destionationVc = HomeViewController()
-            
-            let index = self.tableView.indexPathForSelectedRow?.row
-            let user = viewModel.users![index!]
-            
-            print(destionationVc)
-            destionationVc.viewModel.user = user
-            
-            
-        }
+        
+                let index = self.tableView.indexPathForSelectedRow?.row
+                let user = viewModel.users![index!]
+                let tabBarVc = segue.destinationViewController as! UITabBarController
+                let destinationVc1 = tabBarVc.viewControllers![0] as! HomeViewController
+                let destinationVc2 = tabBarVc.viewControllers![1] as! GraphViewController
+                
+                
+                let homeViewModel = HomeViewModel()
+                let graphViewModel = GraphViewModel()
+                homeViewModel.user = user
+                graphViewModel.user = user
+                
+                destinationVc1.viewModel = homeViewModel
+                destinationVc2.viewModel = graphViewModel
+                
+    
+            }
     }
 
     

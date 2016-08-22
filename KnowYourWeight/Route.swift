@@ -12,4 +12,5 @@ class Route{
     static let FROM_LOGIN_TO_TABBAR = "fromLoginToTabbar"
     static let FROM_LOGIN_TO_SIGN_UP = "fromLoginToSignUp"
     static let FROM_USER_LIST_TO_USER_DETAIL = "fromUserListToUserDetail"
+    static let FROM_HOME_TO_GRAPH = "fromHomeToGraph"
 }
